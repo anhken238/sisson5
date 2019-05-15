@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Từ Điển</title>
+</head>
+
+<body>
+    <form action="">
+        Nhập từ cần tra:<br />
+        <input type="text" id="inputtext" name="inputtext" />
+        <input type="button" onclick="search()" value="Dịch" />
+    </form>
+    <script>
+        // function search() {
+        //     let wordUS = "work, people, style, story"
+        //     var input = document.getElementById("inputtext").value;
+        //     var place = wordUS.indexOf(input,0);
+        //     if(place=0){ document.write('có nghĩa là "Làm Việc"')}
+        //     else if(place=6){ document.write('có nghĩa là "Người"');}
+        //     else if (place=14){document.write('có nghĩa là "phong cách"');}
+        //     else if (place=21){document.write('có nghĩa là "Câu Chuyện"');}
+        //     else document.write("từ bạn nhập không có trên hệ thống vui lòng nhập lại !");
+        // }
+        let wordUS = ["work", "people", "style", "story"];
+        let wordVN = ["việc làm", "người", "phong cách", "câu chuyện"];
+        function search() {
+            let input = document.getElementById("inputtext").value;
+            for (var i = 0; i < wordUS.length; i++) {
+                if (input === wordUS[i]) {
+                    document.write("có nghĩa ViệtNam là " + wordVN[i]);
+                    break;
+                } else
+                    document.write("không có từ đó bạn hãy nhập lại!");
+            }
+        }
+    </script>
+</body>
+
+</html>

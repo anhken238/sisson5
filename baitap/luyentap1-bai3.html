@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bai3</title>
+</head>
+<html>
+
+<body>
+    <!-- <p>Bài 3- Viết chương trình khởi tạo mảng số nguyên.
+        Hiển hiện giá trị lớn nhất trong mảng đó.
+        In ra giá trị trung bình của các phần tử trong mảng.
+    </p> -->
+
+    <script>
+        let arrayInt = [1, 3, 5, 8, 5, 33, 7, 1, 9];
+        let max = arrayInt[0];
+        sum = 0;
+        let cout;
+        let a = 0;
+        for (var i = 0; i < arrayInt.length; i++) {
+            sum = sum + arrayInt[i];
+            if (arrayInt[i] > max) {
+                max = arrayInt[i];
+                cout = i;
+            }
+            a++;
+        }
+        tbc = sum / a;
+        document.write("gia tri lon nhat la :" + max + "ở vị trí " + cout + "<br>" + "giá trị trung bình dãy là " + tbc);
+    </script>
+</body>
+
+</html>

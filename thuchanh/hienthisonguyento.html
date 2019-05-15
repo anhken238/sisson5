@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hiển Thị Số Nguyên Tố</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		let numberInt = parseInt(prompt("Nhập số: "));
+		//let n;
+		//for(count = 0; count < numberInt.lenght ; )
+		let n = 2;
+		let count = 0;
+		while (
+			(n % 2 !== 0 && n % 3 !== 0) || (n === 2) || (n === 3)) {
+			count += 1;
+			n++;
+		}
+		for (count = 0; count < numberInt.lenght; count++) {
+			document.write(n);
+		}
+
+	</script>
+</body>
+
+</html>

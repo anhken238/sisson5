@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bai7</title>
+</head>
+<html>
+
+<body>
+    <!-- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng 
+(Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V
+và gán 0 cho phần tử cuối cùng của mảng) -->
+    <input type="text" id="inputV">
+    <input type="button" onclick="checkV()" value="Check">
+    <div id="result"></div>
+    <script>
+        var a = 0;
+        let text = new Array();
+        function checkV() {
+            let array = [6, 12, 15, 111, 31, 48, 88, 81, 99];
+            let a = 0;
+            text[a] = parseInt(document.getElementById("inputV").value);
+            for (i = 0; i < array.length; i++) {
+                if (text[a] == array[i]) {
+                    array.splice(i, 1);
+                    // array.pop();
+                    document.getElementById("result").innerHTML = array;
+                    break;
+                }
+                else { document.getElementById("result").innerHTML = "V is not IN THE ARRAY"; }
+            }
+        }
+    </script>
+</body>
+
+</html>
